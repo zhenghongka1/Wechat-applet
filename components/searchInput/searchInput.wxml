@@ -1,0 +1,5 @@
+<view class="search-Input">
+<!-- 超链接标签 navigator
+     跳转路劲   url-->
+<navigator url="/pages/search/index">搜索</navigator>
+</view>
