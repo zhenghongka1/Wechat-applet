@@ -1,6 +1,6 @@
 /* components/searchInput/searchInput.wxss */
 .search-Input {
-  height: 90rpx;
+  height: 80rpx;
   padding: 10rpx;
   background-color: var(--themeColor);
 }
@@ -12,5 +12,6 @@
   background-color: white;
   border-radius: 25rpx;
   color: #666;
+  font-size: 30rpx;
 }
 /*# sourceMappingURL=./searchInput.wxss.map */
