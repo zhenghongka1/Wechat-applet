@@ -39,14 +39,14 @@
         "iconPath": "icons/category.png",
         "selectedIconPath": "icons/category-o.png"
       },
-      {
+      { 
         "pagePath": "pages/cart/index",
         "text": "购物车",
         "iconPath": "icons/cart.png",
         "selectedIconPath": "icons/cart-o.png"
       },
       {
-        "pagePath": "pages/goods_detail/index",
+        "pagePath": "pages/user/index",
         "text": "我的",
         "iconPath": "icons/my.png",
         "selectedIconPath": "icons/my-o.png"
