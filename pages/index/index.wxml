@@ -29,13 +29,13 @@
       <!-- 标题 -->
       <view class="floor_title">
         <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
-      </view>
+      </view> 
       <!-- 内容 -->
       <view class="floor_content">
-        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name">
-        <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="*this">
+          <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
         </navigator>
-      </view>
+      </view> 
     </view>
   </view>
   <!-- 楼层展示 结束 -->
