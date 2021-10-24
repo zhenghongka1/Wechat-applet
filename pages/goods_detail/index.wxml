@@ -5,10 +5,10 @@
             <image mode="widthFix" src="{{item.pics_mid}}"></image>
         </swiper-item>
     </swiper>
-</view>
+</view> 
 <!-- 轮播图结束 -->
 <!-- 详情详情开始 -->
-<view> 
+<view>
     <view class="goods_price">￥{{goodsDetailList.goods_price}}</view>
     <view class="goods_name_row">
         <view class="goods_name">{{goodsDetailList.goods_name}}</view>
