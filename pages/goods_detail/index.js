@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsDetailList: []
+    goodsDetailList: [] 
   },
   // 商品的对象
   Goods_Info: {},
@@ -60,6 +60,7 @@ Page({
     if (index === -1) {
       // 3.不在购物车里，第一次添加
       this.Goods_Info.num = 1
+      this.Goods_Info.checked = true
       cartData.push(this.Goods_Info)
     } else {
       // 4.已经存在购物车数据，num++

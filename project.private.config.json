@@ -27,16 +27,19 @@
         {
           "name": "pages/goods_detail/index",
           "pathName": "pages/goods_detail/index",
-<<<<<<< HEAD
           "query": "",
           "scene": null
         },
         {
           "name": "pages/goods_detail/index",
           "pathName": "pages/goods_detail/index",
-=======
->>>>>>> goods_detail
           "query": "goods_id=43986",
+          "scene": null
+        },
+        {
+          "name": "pages/cart/index",
+          "pathName": "pages/cart/index",
+          "query": "",
           "scene": null
         }
       ]
