@@ -2,7 +2,7 @@ page {
   padding-bottom: 90rpx;
 }
 .detail_swiper swiper {
-  height: 65vw;
+  height: 70vw;
   text-align: center;
 }
 .detail_swiper swiper image {

@@ -2,6 +2,12 @@
 let ajaxTimes = 0
 
 export const request = params => {
+// 判断请求参数的url中是否携带my这个字段，如果有则自动带有请求头header
+let header = {...params.header} //这里可能会往往请求头再添加一些参数，所以要用数组拼接
+if(params.url.indexOf('/my/') !== -1){
+  header['Authorization'] = wx.getStorageSync('token');
+}
+
   ajaxTimes++
   // 显示加载中效果
   wx.showLoading({
@@ -14,6 +20,7 @@ export const request = params => {
   return new Promise((resolve, reject) => {
     wx.request({
       ...params,
+      header:header,
       url: baseUrl + params.url, 
       success: (res) => {
         resolve(res)

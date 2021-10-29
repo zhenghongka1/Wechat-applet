@@ -1,4 +1,6 @@
-// pages/auth/index.js
+import { request } from '../../request/request'
+import { login } from '../../utils/async'
+
 Page({
 
   /**
@@ -8,59 +10,35 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  // 获取用户信息
+  async handleGetUserInfo(e) {
 
-  },
+    // console.log(e);
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    // 1.获取用户信息
+    // const { encryptedData, rawData, iv, signature } = e.detail;
+    // // 2.获得小程序登录后的code
+    // const {code} = await login()
+    // // console.log(code);
+    // const loginParams = { encryptedData, rawData, iv, signature,code}
+    // const res = await request({url:"/users/wxlogin",data:loginParams,methods:"post"})
+    // console.log(res); 
 
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    // 因为不是企业账号获取不到后台的token，这里自己定义一个token值
+    try {
+      const { encryptedData, rawData, iv, signature } = e.detail
+      const code = await login()
+      //发送获取token请求
+      const params = { encryptedData, rawData, iv, signature, code }
+      //const { token } = await request({ url: "/users/wxlogin", data: params, method: "post" });
+      let token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE1NjQ3MzAwNzksImV4cCI6MTAwMTU2NDczMDA3OH0.YPt-XeLnjV-_1ITaXGY2FhxmCe4NvXuRnRB8OMCfnPo'
+      wx.setStorageSync('token', token)
+      //wx.setStorageSync('token', token)
+      wx.navigateBack({
+        delta: 1
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 })
