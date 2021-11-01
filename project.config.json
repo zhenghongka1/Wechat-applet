@@ -40,7 +40,7 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.20.0",
+  "libVersion": "2.20.1",
   "appid": "wx1b52e7ae05c31d87",
   "projectname": "zhkShop",
   "debugOptions": {

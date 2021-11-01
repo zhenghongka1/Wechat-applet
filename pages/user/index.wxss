@@ -1,1 +1,112 @@
-/* pages/user/index.wxss */
+page {
+  background-color: #edece8;
+}
+.container {
+  height: 45vh;
+  background-color: var(--themeColor);
+  overflow: hidden;
+}
+.container .userinfo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+.container .userinfo .user_img {
+  height: 48vh;
+  width: 82vh;
+  filter: blur(15rpx);
+}
+.container .userinfo button {
+  width: 70% !important;
+  margin-top: 100rpx;
+}
+.container .userinfo .userinfo_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .userinfo .userinfo_wrap .userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.container .userinfo .userinfo_wrap .userinfo-nickname {
+  text-align: center;
+  font-size: 40rpx;
+  color: white;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+  color: #666;
+}
+.user_content .user_main .history_wrap {
+  background-color: white;
+  display: flex;
+}
+.user_content .user_main .history_wrap navigator {
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
+}
+.user_content .user_main .history_wrap navigator .store_num {
+  color: var(--themeColor);
+}
+.user_content .user_main .order_wrap {
+  background-color: white;
+  margin: 15rpx 0;
+}
+.user_content .user_main .order_wrap .order_title {
+  font-size: 35rpx;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e2dfdf;
+}
+.user_content .user_main .order_wrap .order_content {
+  display: flex;
+}
+.user_content .user_main .order_wrap .order_content navigator {
+  flex: 1;
+  text-align: center;
+  padding: 15rpx 0;
+}
+.user_content .user_main .order_wrap .order_content navigator .iconfont {
+  color: var(--themeColor);
+}
+.user_content .user_main .order_wrap .order_content navigator .order_name {
+  font-size: 27rpx;
+}
+.user_content .user_main .address_set {
+  padding: 15rpx;
+  background-color: white;
+  margin-bottom: 15rpx;
+}
+.user_content .user_main .app_info_wrap {
+  background-color: white;
+}
+.user_content .user_main .app_info_wrap .app_info_item {
+  padding: 15rpx;
+  border-bottom: 1rpx solid #c7c1c1;
+}
+.user_content .user_main .app_info_wrap :last-child {
+  margin-bottom: 20rpx;
+}
+.user_content .user_main .app_info_wrap :nth-child(2) :nth-child(2) {
+  float: right;
+}
+.user_content .user_main .app_info_recommend {
+  padding: 15rpx;
+  background-color: white;
+  margin-bottom: 80rpx;
+}
+/*# sourceMappingURL=./index.wxss.map */

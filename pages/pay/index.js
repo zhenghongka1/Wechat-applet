@@ -6,7 +6,7 @@ Page({
   data: {
     address: {},
     cart: [],
-    totalPrice: 0,
+    totalPrice: 0, 
     totalNum: 0,
   },
 

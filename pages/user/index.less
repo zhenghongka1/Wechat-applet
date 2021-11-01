@@ -1,0 +1,143 @@
+page {
+    background-color: #edece8;
+}
+
+.container {
+    height          : 45vh;
+    background-color: var(--themeColor);
+    overflow        : hidden;
+
+    .userinfo {
+        display       : flex;
+        position      : relative;
+        flex-direction: column;
+        align-items   : center;
+        color         : #aaa;
+
+        .user_img {
+            height: 48vh;
+            width : 82vh;
+            filter: blur(15rpx);
+        }
+
+        button {
+            width     : 70% !important;
+            margin-top: 100rpx;
+        }
+
+        .userinfo_wrap {
+            position : absolute;
+            left     : 50%;
+            top      : 50%;
+            transform: translate(-50%, -50%);
+
+            .userinfo-avatar {
+                overflow     : hidden;
+                width        : 128rpx;
+                height       : 128rpx;
+                margin       : 20rpx;
+                border-radius: 50%;
+            }
+
+            .userinfo-nickname {
+                text-align: center;
+                font-size : 40rpx;
+                color     : white;
+            }
+        }
+    }
+}
+
+.user_content {
+    position: relative;
+
+    .user_main {
+        position : absolute;
+        width    : 90%;
+        left     : 50%;
+        transform: translateX(-50%);
+        top      : -40rpx;
+        color: #666;
+
+        .history_wrap {
+            background-color: white;
+            display         : flex;
+
+            navigator {
+                flex      : 1;
+                padding   : 20rpx 0;
+                text-align: center;
+
+                .store_num {
+                    color: var(--themeColor);
+                }
+
+                .store_name {}
+            }
+        }
+
+        .order_wrap {
+            background-color: white;
+            margin          : 15rpx 0;
+
+            .order_title {
+                font-size    : 35rpx;
+                padding      : 20rpx;
+                border-bottom: 1rpx solid rgb(226, 223, 223);
+            }
+
+            .order_content {
+                display: flex;
+
+                navigator {
+                    flex      : 1;
+                    text-align: center;
+                    padding   : 15rpx 0;
+
+                    .iconfont {
+                        color: var(--themeColor);
+                    }
+
+                    .order_name {
+                        font-size: 27rpx;
+                    }
+                }
+            }
+
+
+        }
+
+        .address_set {
+            padding         : 15rpx;
+            background-color: white;
+            margin-bottom   : 15rpx;
+        }
+
+        .app_info_wrap {
+
+            background-color: white;
+
+            .app_info_item {
+                padding      : 15rpx;
+                border-bottom: 1rpx solid rgb(199, 193, 193);
+            }
+
+            :last-child {
+                margin-bottom: 20rpx;
+            }
+
+            :nth-child(2) {
+
+                :nth-child(2) {
+                    float: right;
+                }
+            }
+        }
+
+        .app_info_recommend {
+            padding         : 15rpx;
+            background-color: white;
+            margin-bottom   : 80rpx;
+        }
+    }
+}
