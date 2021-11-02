@@ -53,7 +53,7 @@
                     <view class="iconfont icon-receipt-address"></view>
                     <view class="order_name">待收货</view>
                 </navigator>
-                <navigator  url="/pages/order/index?type=4">
+                <navigator url="/pages/order/index?type=4">
                     <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
                     <view class="order_name">退款/退货</view>
                 </navigator>
@@ -67,7 +67,9 @@
                 <text>联系客服</text>
                 <text>131-452-000</text>
             </view>
-            <view class="app_info_item">意见反馈</view>
+            <navigator url="/pages/feedback/index">
+                <view class="app_info_item">意见反馈</view>
+            </navigator>
             <view class="app_info_item">关于我们</view>
         </view>
         <view class="app_info_recommend">把应用推荐给他人</view>
