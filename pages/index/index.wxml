@@ -7,7 +7,7 @@
     <!-- 1.swiper 默认存在宽度和高度 100 * 150 -->
     <swiper autoplay interval="2000" indicator-dots indicator-color="gary" indicator-active-color="white">
       <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-        <navigator>
+        <navigator url="{{item.navigator_url}}">
           <!-- 2.image 也存在默认的宽度和高度 -->
           <!-- widthFix让图片的标签的宽高 和 图片的的内容宽高 等比例发生变化 -->
           <image mode="widthFix" src="{{item.image_src}}"></image>
@@ -18,7 +18,7 @@
   <!-- 轮播图 结束 -->
   <!-- 导航栏 开始 -->
   <view class="index_cates">
-    <navigator wx:for="{{catesList}}" wx:key="name">
+    <navigator wx:for="{{catesList}}" wx:key="name" url="/pages/category/index" open-type="switchTab">
       <image mode="widthFix" src="{{item.image_src}}"></image>
     </navigator>
   </view>
@@ -32,7 +32,7 @@
       </view> 
       <!-- 内容 -->
       <view class="floor_content">
-        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="*this">
+        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="*this" url="{{item2.navigator_url}}">
           <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
         </navigator>
       </view> 
